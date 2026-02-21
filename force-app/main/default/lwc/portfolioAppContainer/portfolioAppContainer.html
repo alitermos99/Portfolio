@@ -1,3 +1,25 @@
 <template>
-  <c-portfolio-navbar></c-portfolio-navbar>
+	<c-portfolio-navbar></c-portfolio-navbar>
+
+	<main class="flex items-center text-dark w-full min-h-screen">
+		<c-portfolio-layout class-name="pt-0" style="width: inherit;">
+			<div class="flex items-center justify-between">
+				<div class="w-1/2">
+					<img src={profilePic} alt="developer" class="w-full h-auto" />
+				</div>
+
+				<div class="w-1/2 flex flex-col items-center self-center">
+					<c-animated-text 
+						text="Engineering Efficient Salesforce Systems That Drive Growth." 
+						class-name="!text-6xl !text-left"
+					></c-animated-text>
+					<p>
+						As a Salesforce Technical Consultant, I specialize in transforming complex business requirements into scalable, high-performance Salesforce solutions. 
+						From Apex integrations and Lightning Web Components to Experience Cloud and automation, 
+						I build intuitive, efficient systems that enhance productivity and user experience.
+					</p>
+				</div>
+			</div>
+		</c-portfolio-layout>
+	</main>
 </template>
