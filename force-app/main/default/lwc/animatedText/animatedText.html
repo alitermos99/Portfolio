@@ -1,1 +1,17 @@
-<template> </template>
+<template>
+	<div
+		class="w-full mx-auto py-2 flex items-center justify-center text-center overflow-hidden"
+	>
+		<h1 class={h1ClassName}>
+			<template for:each={splitText} for:item="word" for:index="index">
+				<span
+					key={word.key}
+					class="inline-block opacity-0 animate-fade-up"
+					style={word.style}
+				>
+					{word.label}&nbsp;
+				</span>
+			</template>
+		</h1>
+	</div>
+</template>
