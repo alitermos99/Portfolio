@@ -1,16 +1,16 @@
-import { LightningElement } from 'lwc';
-import Portfolio from '@salesforce/resourceUrl/Portfolio';
+import { LightningElement } from "lwc";
+import Portfolio from "@salesforce/resourceUrl/Portfolio";
 
 export default class PortfolioAppContainer extends LightningElement {
-	isHtmlLoaded = false
-	profilePic = Portfolio + '/profile/developer-pic-1.png';
+	isHtmlLoaded = false;
+	profilePic = Portfolio + "/profile/developer-pic-1.png";
 
-	renderedCallback(){
-		const html = document.querySelector('html');
+	renderedCallback() {
+		const html = document.querySelector("html"); // eslint-disable-line
 
-		if(html && !this.isHtmlLoaded){
+		if (html && !this.isHtmlLoaded) {
 			this.isHtmlLoaded = true;
-			html.classList.add('bg-light');
+			html.classList.add("bg-light");
 		}
 	}
 }
