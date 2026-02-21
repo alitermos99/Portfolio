@@ -1,38 +1,57 @@
 <template>
-  <header class="w-full px-32 py-8 flex items-center justify-between">
-    <nav>
-      <c-portfolio-link
-        href="/"
-        title="Home"
-        class-name="mr-4"
-      ></c-portfolio-link>
-      <c-portfolio-link
-        href="/about"
-        title="About"
-        class-name="mx-4"
-      ></c-portfolio-link>
-      <c-portfolio-link
-        href="/projects"
-        title="Projects"
-        class-name="mx-4"
-      ></c-portfolio-link>
-      <c-portfolio-link
-        href="/contact"
-        title="Contact"
-        class-name="ml-4"
-      ></c-portfolio-link>
-    </nav>
+	<header class="w-full px-32 py-8 flex items-center justify-between">
+		<nav>
+			<c-portfolio-link
+				href="/"
+				title="Home"
+				class-name="mr-4"
+			></c-portfolio-link>
+			<c-portfolio-link
+				href="/about"
+				title="About"
+				class-name="mx-4"
+			></c-portfolio-link>
+			<c-portfolio-link
+				href="/projects"
+				title="Projects"
+				class-name="mx-4"
+			></c-portfolio-link>
+			<c-portfolio-link
+				href="/contact"
+				title="Contact"
+				class-name="ml-4"
+			></c-portfolio-link>
+		</nav>
 
-    <nav>
-      <c-link href="/">Twitter</c-link>
-      <c-link href="/">Twitter</c-link>
-      <c-link href="/">Twitter</c-link>
-      <c-link href="/">Twitter</c-link>
-      <c-link href="/">Twitter</c-link>
-    </nav>
+		<nav class="flex items-center justify-center flex-wrap">
+			<a
+				href="https://github.com/alitermos99"
+				target="_blank"
+				class="mx-3 transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-90"
+			>
+				<c-portfolio-icons
+					icon-name="github"
+					class-name="w-6 h-6"
+				></c-portfolio-icons>
+			</a>
 
-    <div class="absolute left-[50%] top-2 translate-x-[-50%]">
-      <c-portfolio-logo></c-portfolio-logo>
-    </div>
-  </header>
+			<a
+				href="https://www.linkedin.com/in/ali-termos-9866591a6/"
+				target="_blank"
+				class="mx-3 transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-90"
+			>
+				<c-portfolio-icons
+					icon-name="linkedIn"
+					class-name="w-6 h-6"
+				></c-portfolio-icons>
+			</a>
+
+			<!-- <c-link href="/">Instagram</c-link>
+			<c-link href="/">YouTube</c-link> -->
+		</nav>
+
+		<div class="absolute left-[50%] top-2 translate-x-[-50%]">
+			<c-portfolio-logo></c-portfolio-logo>
+		</div>
+	</header>
 </template>
