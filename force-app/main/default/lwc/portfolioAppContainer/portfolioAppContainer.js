@@ -4,6 +4,7 @@ import Portfolio from "@salesforce/resourceUrl/Portfolio";
 export default class PortfolioAppContainer extends LightningElement {
 	isHtmlLoaded = false;
 	profilePic = Portfolio + "/profile/developer-pic-1.png";
+	resumeLink = Portfolio + "/resume/alitermosSalesforceDeveloperCV.pdf";
 
 	renderedCallback() {
 		const html = document.querySelector("html"); // eslint-disable-line
