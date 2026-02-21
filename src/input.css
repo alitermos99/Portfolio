@@ -3,32 +3,60 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    font-family: "Montserrat", sans-serif;
-  }
+	* {
+		font-family: "Montserrat", sans-serif;
+	}
 }
 
 @layer utilities {
-  @keyframes gradientMove {
-    0% {
-      background-position: 0%;
-    }
-    100% {
-      background-position: 100%;
-    }
-  }
+	@keyframes gradientMove {
+		0% {
+			background-position: 0%;
+		}
+		100% {
+			background-position: 100%;
+		}
+	}
 
-  .hover-gradient-loop:hover {
-    background: linear-gradient(
-      270deg,
-      #121212,
-      rgba(131, 58, 180, 1),
-      rgba(253, 29, 29, 1),
-      rgba(252, 176, 69, 1),
-      rgba(131, 58, 180, 1),
-      #121212
-    );
-    background-size: 400% 400%;
-    animation: gradientMove 2s linear infinite;
-  }
+	.hover-gradient-loop:hover {
+		background: linear-gradient(
+			270deg,
+			#121212,
+			rgba(131, 58, 180, 1),
+			rgba(253, 29, 29, 1),
+			rgba(252, 176, 69, 1),
+			rgba(131, 58, 180, 1),
+			#121212
+		);
+		background-size: 400% 400%;
+		animation: gradientMove 2s linear infinite;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	.animate-fade-in {
+		animation: fadeIn 1s ease forwards;
+	}
+
+	@keyframes fadeUp {
+		from {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-fade-up {
+		animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	}
 }
