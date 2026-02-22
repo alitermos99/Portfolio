@@ -1,5 +1,5 @@
 <template>
-	<div class="image-wrapper">
+	<div class="image-wrapper" style={wrapperStyle}>
 		<div if:false={isLoaded} class="skeleton"></div>
 
 		<img src={src} alt={alt} class={imageClass} onload={handleLoad} />

@@ -2,7 +2,12 @@
 	<c-portfolio-navbar></c-portfolio-navbar>
 
 	<main class="text-dark w-full min-h-screen">
-		<c-portfolio-home-page></c-portfolio-home-page>
+		<template lwc:if={isHomePage}>
+			<c-portfolio-home-page></c-portfolio-home-page>
+		</template>
+		<template lwc:elseif={isAboutPage}>
+			<c-portfolio-about-page></c-portfolio-about-page>
+		</template>
 	</main>
 
 	<c-portfolio-footer></c-portfolio-footer>

@@ -1,7 +1,24 @@
-import { LightningElement } from "lwc";
+import { LightningElement, wire } from "lwc";
+import { CurrentPageReference } from 'lightning/navigation';
 
 export default class PortfolioAppContainer extends LightningElement {
+	currentPageName;
 	isHtmlLoaded = false;
+
+	get isHomePage() {
+		return this.currentPageName === "Home";
+	}
+
+	get isAboutPage() {
+		return this.currentPageName === "About__c";
+	}
+
+	@wire(CurrentPageReference)
+    getStateParameters(currentPageReference) {
+       if (currentPageReference) {
+			this.currentPageName = currentPageReference.attributes?.name;
+       }
+    }
 
 	renderedCallback() {
 		const html = document.querySelector("html"); // eslint-disable-line
