@@ -1,1 +1,14 @@
-<template> </template>
+<template>
+    <h2 class="font-bold text-8xl mt-64 w-full text-center">Skills</h2>
+
+    <div class="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight">
+        <div class="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark
+            cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-lg ease-in-out">
+            Salesforce
+        </div>
+
+        <template for:each={skills} for:item="skill">
+            <c-portfolio-skill key={skill.name} name={skill.name} x={skill.x} y={skill.y}></c-portfolio-skill>
+        </template>
+    </div>
+</template>

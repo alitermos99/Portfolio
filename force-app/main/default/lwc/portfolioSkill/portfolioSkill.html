@@ -1,1 +1,11 @@
-<template> </template>
+<template>
+    <div
+        class="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark
+        cursor-pointer transform transition-all duration-1000 ease-in-out hover:shadow-lg absolute"
+        style={dynamicStyle}
+        onmouseover={handleMouseOver}
+        onmouseout={handleMouseOut}
+    >
+        {name}
+    </div>
+</template>
