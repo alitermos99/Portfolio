@@ -558,6 +558,40 @@ video {
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .visible {
   visibility: visible;
 }
@@ -614,6 +648,18 @@ video {
   top: 0.5rem;
 }
 
+.left-8 {
+  left: 2rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-9 {
+  left: 2.25rem;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -646,8 +692,22 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-64 {
+  margin-top: 16rem;
+  margin-bottom: 16rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mb-32 {
+  margin-bottom: 8rem;
 }
 
 .mb-4 {
@@ -755,8 +815,24 @@ video {
   width: 1.5rem;
 }
 
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-\[75\%\] {
+  width: 75%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-\[4px\] {
+  width: 4px;
+}
+
+.origin-top {
+  transform-origin: top;
 }
 
 .-translate-x-1\/2 {
@@ -774,6 +850,21 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-y-0 {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-12 {
+  --tw-translate-y: 3rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-rotate-90 {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -788,8 +879,26 @@ video {
   animation: spin 8s linear infinite;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.resize {
+  resize: both;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-8 {
@@ -909,6 +1018,34 @@ video {
   fill: #1b1b1b;
 }
 
+.fill-none {
+  fill: none;
+}
+
+.fill-light {
+  fill: #f5f5f5;
+}
+
+.fill-primary {
+  fill: #B63E96;
+}
+
+.stroke-dark {
+  stroke: #1b1b1b;
+}
+
+.stroke-primary {
+  stroke: #B63E96;
+}
+
+.stroke-1 {
+  stroke-width: 1;
+}
+
+.stroke-\[5px\] {
+  stroke-width: 5px;
+}
+
 .p-2\.5 {
   padding: 0.625rem;
 }
@@ -951,12 +1088,25 @@ video {
   padding-bottom: 2rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pt-0 {
   padding-top: 0px;
 }
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pl-\[2rem\] {
+  padding-left: 2rem;
+}
+
+.pl-\[1\.2rem\] {
+  padding-left: 1.2rem;
 }
 
 .\!text-left {
@@ -1054,6 +1204,10 @@ video {
   opacity: 0;
 }
 
+.opacity-100 {
+  opacity: 1;
+}
+
 .shadow-\[10px_10px_0px_1px_rgba\(0\2c 0\2c 0\2c 1\)\] {
   --tw-shadow: 10px 10px 0px 1px rgba(0,0,0,1);
   --tw-shadow-colored: 10px 10px 0px 1px var(--tw-shadow-color);
@@ -1103,6 +1257,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .ease-in-out {
@@ -1165,6 +1323,14 @@ video {
 
 .animate-fade-up {
   animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.first\:mt-0:first-child {
+  margin-top: 0px;
+}
+
+.last\:mb-0:last-child {
+  margin-bottom: 0px;
 }
 
 .hover\:-translate-y-0\.5:hover {

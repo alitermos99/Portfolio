@@ -1,1 +1,30 @@
-<template> </template>
+<template>
+    <div class="my-64">
+        <h2 class="font-bold text-8xl mb-32 w-full text-center">Experience</h2>
+
+        <div class="w-[75%] mx-auto relative" lwc:ref="section">
+            <div
+                class="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top transform"
+                style={lineStyle}>
+            </div>
+
+            <ul class="w-full flex flex-col items-start justify-between ml-4">
+                <template for:each={experience} for:item="exp">
+                    <li key={exp.id}
+                        data-id={exp.id}
+                        class="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
+                        <c-portfolio-li-icon reference={reference} parent-id={exp.id}></c-portfolio-li-icon>
+
+                        <c-portfolio-experience-details
+                            work={exp.work}
+                            time={exp.time}
+                            address={exp.address}
+                            position={exp.position}
+                            company={exp.company}>
+                        </c-portfolio-experience-details>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</template>

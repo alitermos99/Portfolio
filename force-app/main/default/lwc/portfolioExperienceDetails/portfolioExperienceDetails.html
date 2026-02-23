@@ -1,1 +1,23 @@
-<template> </template>
+<template>
+    <div class={containerClasses}>
+        <h3 class="capitalize font-bold text-2xl">
+            {position}&nbsp;
+            <template lwc:if={companyLink}>
+                <a href={companyLink} target="_blank" class="text-primary capitalize">@{company}</a>
+            </template>
+            <template lwc:else>
+                <span class="text-primary capitalize">@{company}</span>
+            </template>
+        </h3>
+
+        <span class="capitalize font-medium text-dark/75">
+            {time} | {address}
+        </span>
+
+        <ul class="font-medium w-full list-disc pl-[1.2rem]">
+            <template for:each={workDetails} for:item="line">
+                <li key={line}>{line}</li>
+            </template>
+        </ul>
+    </div>
+</template>
