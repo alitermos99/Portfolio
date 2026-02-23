@@ -17,7 +17,7 @@ export default class PortfolioEducation extends LightningElement {
 			type: "High School degree",
 			time: "2017 - 2018",
 			place: "Hussein Maktabe High School",
-			info: "Relevant courses included Physics, Chemistry, Biology, and Mathematics."
+			info: "Relevant courses included Physics, Chemistry, and Mathematics."
 		}
 	];
 
