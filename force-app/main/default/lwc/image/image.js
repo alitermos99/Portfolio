@@ -12,7 +12,7 @@ export default class Image extends LightningElement {
 	}
 
 	get wrapperStyle() {
-		return this.isLoaded ? '100%' : `height: ${this.wrapperHeight}`;
+		return this.isLoaded ? "height: 100%" : `height: ${this.wrapperHeight}`;
 	}
 
 	handleLoad() {

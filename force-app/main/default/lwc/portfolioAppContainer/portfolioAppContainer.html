@@ -8,6 +8,9 @@
 		<template lwc:elseif={isAboutPage}>
 			<c-portfolio-about-page></c-portfolio-about-page>
 		</template>
+		<template lwc:elseif={isProjectsPage}>
+			<c-portfolio-projects-page></c-portfolio-projects-page>
+		</template>
 	</main>
 
 	<c-portfolio-footer></c-portfolio-footer>

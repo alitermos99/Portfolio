@@ -1,5 +1,5 @@
 import { LightningElement, wire } from "lwc";
-import { CurrentPageReference } from 'lightning/navigation';
+import { CurrentPageReference } from "lightning/navigation";
 
 export default class PortfolioAppContainer extends LightningElement {
 	currentPageName;
@@ -13,12 +13,16 @@ export default class PortfolioAppContainer extends LightningElement {
 		return this.currentPageName === "About__c";
 	}
 
+	get isProjectsPage() {
+		return this.currentPageName === "Projects__c";
+	}
+
 	@wire(CurrentPageReference)
-    getStateParameters(currentPageReference) {
-       if (currentPageReference) {
+	getStateParameters(currentPageReference) {
+		if (currentPageReference) {
 			this.currentPageName = currentPageReference.attributes?.name;
-       }
-    }
+		}
+	}
 
 	renderedCallback() {
 		const html = document.querySelector("html"); // eslint-disable-line
