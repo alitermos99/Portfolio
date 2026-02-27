@@ -23,7 +23,7 @@ export default class PortfolioProject extends LightningElement {
 	}
 
 	get articleClass() {
-		const baseClass = 'w-full flex items-center border border-solid border-dark bg-light';
+		const baseClass = 'w-full flex items-center border border-solid border-dark bg-light shadow-[10px_10px_0px_1px_rgba(0,0,0,1)]';
 
 		return this.isFeaturedProject ?
 			`${baseClass} justify-between rounded-3xl shadow-2xl p-12` : `${baseClass} flex-col justify-center rounded-2xl p-6 relative`;
