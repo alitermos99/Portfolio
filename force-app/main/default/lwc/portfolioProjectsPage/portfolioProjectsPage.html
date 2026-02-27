@@ -1,1 +1,49 @@
-<template> </template>
+<template>
+    <main class="w-full mb-16 flex flex-col items-center justify-center">
+        <c-portfolio-layout class-name="pt-16">
+            <c-animated-text text="Imagination Trumps Knowledge!" class-name="mb-16"></c-animated-text>
+
+            <div class="grid grid-cols-12 gap-24">
+                <template for:each={projects} for:item="project">
+                    <template lwc:if={project.isFeaturedProject}>
+                        <div key={project.id} class="col-span-12">
+                            <c-portfolio-featured-project
+                                name={project.name}
+                                title={project.titile}
+                                summary={project.summary}
+                                img={project.img}
+                                link={project.link}
+                                github={project.github}
+                                responsibilities={project.responsibilities}
+                                time={project.time}
+                            ></c-portfolio-featured-project>
+                        </div>
+                    </template>
+                    <template lwc:else>
+                        <div key={project.id} class="col-span-6">
+                            Project-1
+                        </div>
+                    </template>
+                </template>
+
+                <div class="col-span-6">
+                    Project-1
+                </div>
+                <div class="col-span-6">
+                    Project-2
+                </div>
+
+                <div class="col-span-12">
+                    Featured Project
+                </div>
+
+                <div class="col-span-6">
+                    Project-3
+                </div>
+                <div class="col-span-6">
+                    Project-4
+                </div>
+            </div>
+        </c-portfolio-layout>
+    </main>
+</template>
