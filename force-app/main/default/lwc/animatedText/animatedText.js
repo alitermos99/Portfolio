@@ -5,7 +5,7 @@ export default class AnimatedText extends LightningElement {
 	@api className = "";
 
 	get h1ClassName() {
-		return `inline-block w-full text-dark font-bold capitalize text-8xl opacity-0 animate-fade-in delay-500 ${this.className}`;
+		return `inline-block w-full text-dark font-bold capitalize text-8xl opacity-0 animate-fade-in delay-500 ${this.className} dark:text-light`;
 	}
 
 	get splitText() {

@@ -4,7 +4,7 @@
 
         <div class="w-[75%] mx-auto relative" lwc:ref="section">
             <div
-                class="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top transform"
+                class="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top transform dark:bg-light"
                 style={lineStyle}>
             </div>
 
@@ -12,7 +12,7 @@
                 <template for:each={education} for:item="edu">
                     <li key={edu.id}
                         data-id={edu.id}
-                        class="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
+                        class="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between">
                         <c-portfolio-li-icon reference={reference} parent-id={edu.id}></c-portfolio-li-icon>
 
                         <c-portfolio-education-details

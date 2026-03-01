@@ -13,7 +13,7 @@ export default class PortfolioLink extends LightningElement {
 
 	get spanClassName() {
 		const href = this.href === "/" ? "Home" : this.href;
-		return `${this._currentPageName === href ? "w-full" : "w-0"} h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300`;
+		return `${this._currentPageName === href ? "w-full" : "w-0"} h-[1px] inline-block bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 dark:bg-light`;
 	}
 
 	@wire(CurrentPageReference)

@@ -52,7 +52,6 @@ export default class PortfolioThemeSwitcher extends LightningElement {
 
     setMode(mode) {
         this.mode = mode;
-
         const html = document.documentElement;
 
         if (mode === 'dark') {
@@ -63,6 +62,14 @@ export default class PortfolioThemeSwitcher extends LightningElement {
             window.localStorage.setItem(STORAGE_KEY, 'light');
             html.classList.remove('dark');
         }
+
+        window.dispatchEvent(new CustomEvent('themeChange', 
+            { 
+                detail: { 
+                    mode 
+                } 
+            }
+        ));
     }
 
     toggleTheme() {
