@@ -4,6 +4,7 @@ export default class PortfolioIcons extends LightningElement {
 	@api iconName;
 	@api className;
 	@api restProps;
+	@api isDark = false;
 
 	get github() {
 		return this.iconName === "github";
@@ -13,12 +14,8 @@ export default class PortfolioIcons extends LightningElement {
 		return this.iconName === "linkedIn";
 	}
 
-	get sunIcon() {
-		return this.iconName === "sun";
-	}
-
-	get moonIcon() {
-		return this.iconName === "moon";
+	get themeIcons() {
+		return this.iconName === "sun" || this.iconName === "moon";
 	}
 
 	get circularText() {
@@ -27,5 +24,17 @@ export default class PortfolioIcons extends LightningElement {
 
 	get linkArrowIcon() {
 		return this.iconName === "linkArrow";
+	}
+
+	get sunClass() {
+        return `sun svg w-4 h-4 ${this.isDark ? 'sun-hide' : 'sun-show'}`;
+    }
+
+    get moonClass() {
+        return `moon svg w-4 h-4 ${this.isDark ? 'moon-show' : 'moon-hide'}`;
+    }
+
+	get themeIconsWrapperClass() {
+		return `icon-wrapper ${this.className}`;
 	}
 }

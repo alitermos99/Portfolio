@@ -1,6 +1,5 @@
 <template>
-    <button onclick={toggleTheme} class="transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-90
-        ml-3 flex items-center justify-center rounded-full p-1">
-        {mode}
+    <button onclick={toggleTheme} class={buttonClass}>
+        <c-portfolio-icons icon-name={iconName} class-name="w-4 h-4" is-dark={isDark}></c-portfolio-icons>
     </button>
 </template>

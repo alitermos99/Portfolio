@@ -9,9 +9,18 @@ export default class PortfolioThemeSwitcher extends LightningElement {
     mediaQuery;
     handleChange;
 
+    get isDark() {
+        return this.mode === 'dark';
+    }
+
 	get iconName() {
-		return this.mode === 'dark' ? 'moon' : 'sun';
+		return this.mode === 'dark' ? 'sun' : 'moon';
 	}
+
+    get buttonClass() {
+        const baseClass = 'w-6 h-6 transition-transform duration-200 ease-out hover:-translate-y-0.5 active:scale-90 ml-3 flex items-center justify-center rounded-full p-1';
+        return this.mode === 'light' ? `${baseClass} bg-dark text-light` : `${baseClass} bg-light text-dark`;
+    }
 
     connectedCallback() {
         this.mediaQuery = window.matchMedia(MEDIA_QUERY);
