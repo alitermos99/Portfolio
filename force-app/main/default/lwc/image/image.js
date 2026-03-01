@@ -2,6 +2,8 @@ import { LightningElement, api } from "lwc";
 
 export default class Image extends LightningElement {
 	@api src;
+	@api sizes;
+	@api priority;
 	@api alt = "";
 	@api className = "";
 	@api wrapperHeight = "10rem";

@@ -2,7 +2,13 @@
 	<c-portfolio-layout class-name="pt-0" style="width: inherit">
 		<div class="flex items-center justify-between">
 			<div class="w-1/2">
-				<img src={profilePic} alt="developer" class="w-full h-auto" />
+				<img
+					src={profilePic}
+					alt="developer"
+					class="w-full h-auto"
+					priority="high"
+					sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,50vw"
+				/>
 			</div>
 
 			<div class="w-1/2 flex flex-col items-center self-center">

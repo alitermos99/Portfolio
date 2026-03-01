@@ -2,6 +2,13 @@
 	<div class="image-wrapper" style={wrapperStyle}>
 		<div if:false={isLoaded} class="skeleton"></div>
 
-		<img src={src} alt={alt} class={imageClass} onload={handleLoad} />
+		<img
+			src={src}
+			alt={alt}
+			class={imageClass}
+			onload={handleLoad}
+			fetchpriority={priority}
+			sizes={sizes}
+		/>
 	</div>
 </template>

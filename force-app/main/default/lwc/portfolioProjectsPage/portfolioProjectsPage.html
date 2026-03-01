@@ -1,25 +1,30 @@
 <template>
-    <main class="w-full mb-16 flex flex-col items-center justify-center">
-        <c-portfolio-layout class-name="pt-16">
-            <c-animated-text text="Imagination Trumps Knowledge!" class-name="mb-16"></c-animated-text>
+	<main
+		class="w-full mb-16 flex flex-col items-center justify-center dark:text-light"
+	>
+		<c-portfolio-layout class-name="pt-16">
+			<c-animated-text
+				text="Imagination Trumps Knowledge!"
+				class-name="mb-16"
+			></c-animated-text>
 
-            <div class="grid grid-cols-12 gap-24 gap-y-32">
-                <template for:each={projects} for:item="project">
-                        <div key={project.id} class={project.divClass}>
-                            <c-portfolio-project
-                                name={project.name}
-                                title={project.title}
-                                summary={project.summary}
-                                img={project.img}
-                                link={project.link}
-                                github={project.github}
-                                responsibilities={project.responsibilities}
-                                time={project.time}
-                                is-featured-project={project.isFeaturedProject}
-                            ></c-portfolio-project>
-                        </div>
-                </template>
-            </div>
-        </c-portfolio-layout>
-    </main>
+			<div class="grid grid-cols-12 gap-24 gap-y-32">
+				<template for:each={projects} for:item="project">
+					<div key={project.id} class={project.divClass}>
+						<c-portfolio-project
+							name={project.name}
+							title={project.title}
+							summary={project.summary}
+							img={project.img}
+							link={project.link}
+							github={project.github}
+							responsibilities={project.responsibilities}
+							time={project.time}
+							is-featured-project={project.isFeaturedProject}
+						></c-portfolio-project>
+					</div>
+				</template>
+			</div>
+		</c-portfolio-layout>
+	</main>
 </template>
