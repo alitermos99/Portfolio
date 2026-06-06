@@ -1,5 +1,13 @@
 <template>
-	<header class="w-full px-32 py-8 flex items-center justify-between dark:text-light">
+	<header
+		class="w-full px-32 py-8 flex items-center justify-between dark:text-light"
+	>
+		<button class="flex flex-col justify-center items-center">
+			<span class="bg-dark dark:bg-light block h-0.5 w-6 rounded-sm"></span>
+			<span class="bg-dark dark:bg-light block h-0.5 w-6 rounded-sm"></span>
+			<span class="bg-dark dark:bg-light block h-0.5 w-6 rounded-sm"></span>
+		</button>
+
 		<nav>
 			<c-portfolio-link
 				href="/"
@@ -41,7 +49,9 @@
 				></c-portfolio-icons>
 			</a>
 
-			<c-portfolio-theme-switcher class-name="w-6 h-6"></c-portfolio-theme-switcher>
+			<c-portfolio-theme-switcher
+				class-name="w-6 h-6"
+			></c-portfolio-theme-switcher>
 		</nav>
 
 		<div class="absolute left-[50%] top-2 translate-x-[-50%]">
